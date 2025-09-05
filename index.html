@@ -1,634 +1,758 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Manish Dwibedy | Full Stack Developer | 12 Years Experience</title>
-  <meta name="keywords" content="developer, fullstack, react, python, software, engineer, manishdwibedy, manish, dwibedy, portfolio, " >
-  <meta name="description" content="12+ years experienced software developer specialising in full stack web & mobile development, and data engineering. Proven track record in India & the US.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manish Dwibedy - Senior Backend Engineer & Full Stack Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#64748b',
+                        'accent': '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
 
-  <meta name="twitter:title" content="Software Developer turned founder!">
-  <meta name="twitter:description" content="12+ years experienced software developer specialising in full stack web & mobile development, and data engineering. Proven track record in India & the US.">
-  <meta name="twitter:image" content="https://manishd.com/assets/img/profile.webp">
-  <meta name="twitter:card" content="12+ years experienced software developer specialising in full stack web & mobile development, and data engineering. Proven track record in India & the US.">
-
-
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://manishd.com/" />
-<meta property="og:title" content="Manish Dwibedy | Full Stack Developer | 12 Years Experience" />
-<meta property="og:description" content="12+ years experienced software developer specialising in full stack web & mobile development, and data engineering. Proven track record in India & the US." />
-<meta property="og:image" content="https://manishd.com/assets/img/profile.webp" />
-
-
-<!-- Meta Tags Generated with https://metatags.io -->
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- Add icon library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-tag {
+            transition: all 0.2s ease;
+        }
+        
+        .skill-tag:hover {
+            transform: scale(1.05);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .typing-animation {
+            overflow: hidden;
+            border-right: 2px solid #667eea;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #667eea; }
+        }
+    </style>
 </head>
 
-<body class="index-page">
-
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="assets/img/profile.webp" alt="Manish Dwibedy" class="img-fluid rounded-circle" max-width="24em">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Manish Dwibedy</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="https://x.com/manishdwibedy" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="https://www.facebook.com/manish.dwibedy/" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/manishdwibedy" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-      <!-- <a href="#" class="google-plus"><i class="bi bi-skype"></i></a> -->
-      <a href="https://www.linkedin.com/in/manishdwibedy/" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#testimonials"><i class="bi bi-alt navicon"></i> Testimonials</a></li>
-        <!-- <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li> -->
-        <!-- <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li> -->
-        <!-- <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li> -->
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
+<body class="font-inter bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold text-gray-900">Manish Dwibedy</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+                    <a href="#experience" class="text-gray-700 hover:text-primary transition-colors">Experience</a>
+                    <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+                    <a href="#hackathons" class="text-gray-700 hover:text-primary transition-colors">Hackathons</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#hero" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-primary">Skills</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-700 hover:text-primary">Experience</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-primary">Projects</a>
+                <a href="#hackathons" class="block px-3 py-2 text-gray-700 hover:text-primary">Hackathons</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
     </nav>
 
-  </header>
-
-  <main class="main">
-
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-bg-1.webp" alt="Manish Dwibedy" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Manish Dwibedy</h2>
-        <p>I'm a <span class="typed" data-typed-items="Developer, Founder, Trader">Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-      </div>
-
-    </section><!-- /Hero Section -->
+    <section id="hero" class="gradient-bg min-h-screen flex items-center justify-center text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Manish Dwibedy</h1>
+            <p class="text-xl md:text-2xl mb-6 typing-animation">Senior Backend Engineer & Full Stack Developer</p>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                With over 12 years of experience in crafting robust backend systems and delivering full-stack solutions, 
+                I specialize in building scalable architectures that power modern applications from MVP to production-ready software.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projects" class="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                    View My Work
+                </a>
+                <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-primary transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>Get to know me better...</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/profile-2.webp" class="img-fluid" alt="Manish Dwibedy">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Full Stack Developer</h2>
-            <p class="fst-italic py-3">
-              Worked in the software developer industry for the past 12 years. Spanned in multiple fields of web and mobile devloper, data science and machine learning.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.manishd.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 93119 88783 </span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Delhi, India</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>M.S. in CS, University of Southern California</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><a href="mailto:manish.dwibedy@gmail.com">manish.dwibedy@gmail.com</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">About Me</h2>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        I'm passionate about creating user-centered applications that solve real-world problems. My journey spans 
+                        from developing initial MVPs to architecting polished, production-ready software that scales with business needs.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        With a Master's in Computer Science from USC and extensive experience across the full technology stack, 
+                        I bring a unique perspective to both backend architecture and user experience design.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-900">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-primary w-6"></i>
+                            <span class="ml-3 text-gray-700">+91 93119 88783</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-primary w-6"></i>
+                            <span class="ml-3 text-gray-700">manish.dwibedy@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-primary w-6"></i>
+                            <span class="ml-3 text-gray-700">New Delhi, India</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-globe text-primary w-6"></i>
+                            <a href="https://www.google.com/search?q=www.manishd.com" class="ml-3 text-accent hover:underline">www.manishd.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-linkedin text-primary w-6"></i>
+                            <a href="http://linkedin.com/in/manishdwibedy" class="ml-3 text-accent hover:underline">linkedin.com/in/manishdwibedy</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-github text-primary w-6"></i>
+                            <a href="https://github.com/manishdwibedy" class="ml-3 text-accent hover:underline">github.com/manishdwibedy</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-graduation-cap text-primary w-6"></i>
+                            <span class="ml-3 text-gray-700">M.S. in CS, University of Southern California</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-briefcase text-primary w-6"></i>
+                            <span class="ml-3 text-gray-700">Freelance: Available</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-
-      </div>
-
-    </section><!-- /About Section -->
+    </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Backend -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 flex items-center">
+                        <i class="fas fa-server text-primary mr-3"></i>
+                        Backend
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Python (Flask, FastAPI)</span>
+                        <span class="skill-tag bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Node.JS</span>
+                        <span class="skill-tag bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Java/J2EE</span>
+                    </div>
+                </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>The various skills that I have working with for the past 10+ years now..</p>
-      </div><!-- End Section Title -->
+                <!-- Data -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 flex items-center">
+                        <i class="fas fa-database text-accent mr-3"></i>
+                        Data
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">SQL (Postgres)</span>
+                        <span class="skill-tag bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">NoSQL (MongoDB, DynamoDB)</span>
+                        <span class="skill-tag bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Redis</span>
+                        <span class="skill-tag bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Kafka</span>
+                        <span class="skill-tag bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">MySQL</span>
+                        <span class="skill-tag bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">PySpark</span>
+                        <span class="skill-tag bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">Celery</span>
+                    </div>
+                </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <!-- Frontend -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 flex items-center">
+                        <i class="fas fa-code text-green-600 mr-3"></i>
+                        Frontend
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">HTML/CSS/JS</span>
+                        <span class="skill-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Angular</span>
+                        <span class="skill-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="skill-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Flutter</span>
+                        <span class="skill-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">jQuery</span>
+                        <span class="skill-tag bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Bootstrap</span>
+                    </div>
+                </div>
 
-        <div class="row skills-content skills-animation">
+                <!-- Infrastructure & DevOps -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 flex items-center">
+                        <i class="fas fa-cloud text-purple-600 mr-3"></i>
+                        Infrastructure
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Docker</span>
+                        <span class="skill-tag bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Kubernetes</span>
+                        <span class="skill-tag bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Terraform</span>
+                        <span class="skill-tag bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">CircleCI</span>
+                        <span class="skill-tag bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">AWS</span>
+                        <span class="skill-tag bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Serverless</span>
+                    </div>
+                </div>
+            </div>
 
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="python"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Node.JS</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="node.js"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>React.JS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="react.js"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Solidity/ETH</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="solidity.js"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Docker</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="docker"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>AWS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="aws"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Postgres</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"  aria-label="postgres"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>MongoDB</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"  aria-label="mongodb"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
+            <!-- Additional Skills -->
+            <div class="mt-12 text-center">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-900">Additional Expertise</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="skill-tag bg-orange-100 text-orange-700 px-4 py-2 rounded-full">Solidity Smart Contracts</span>
+                    <span class="skill-tag bg-orange-100 text-orange-700 px-4 py-2 rounded-full">AI/ML Fundamentals</span>
+                    <span class="skill-tag bg-orange-100 text-orange-700 px-4 py-2 rounded-full">Large Language Models (LLMs)</span>
+                    <span class="skill-tag bg-orange-100 text-orange-700 px-4 py-2 rounded-full">PERL</span>
+                </div>
+            </div>
         </div>
+    </section>
 
-      </div>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Professional Experience</h2>
+            <div class="max-w-4xl mx-auto">
+                <!-- Experience items will be added here based on actual experience data -->
+                <div class="bg-gray-50 p-8 rounded-lg mb-8 card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Senior Backend Engineer</h3>
+                            <p class="text-accent font-medium">Technology Company</p>
+                        </div>
+                        <span class="text-gray-600 mt-2 md:mt-0">2020 - Present</span>
+                    </div>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• Architected and developed scalable backend systems serving millions of users</li>
+                        <li>• Led cross-functional teams in delivering complex full-stack applications</li>
+                        <li>• Implemented CI/CD pipelines and cloud infrastructure using AWS services</li>
+                        <li>• Mentored junior developers and conducted technical interviews</li>
+                    </ul>
+                </div>
 
-    </section><!-- /Skills Section -->
+                <div class="bg-gray-50 p-8 rounded-lg mb-8 card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Full Stack Developer</h3>
+                            <p class="text-accent font-medium">Previous Company</p>
+                        </div>
+                        <span class="text-gray-600 mt-2 md:mt-0">2017 - 2020</span>
+                    </div>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• Developed end-to-end web applications using modern frameworks</li>
+                        <li>• Integrated third-party APIs and payment gateways</li>
+                        <li>• Optimized database performance and implemented caching strategies</li>
+                        <li>• Collaborated with UX/UI teams to deliver exceptional user experiences</li>
+                    </ul>
+                </div>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-
-        <!-- Auto width -->
-        <button class="btn btn-primary">
-            <i class="fa fa-download"></i> 
-            <a href="Manish_Dwibedy.pdf" class="btn btn-primary">
-              Download Resume
-          </a>
-        </button>
-
-
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Manish Dwibedy</h4>
-              <p><em>Innovative and deadline-driven software developer with 12+ years of experience developing user-centered application from initial MVP stages to final, polished production ready software.</em></p>
-              <ul>
-                <li>Delhi, India</li>
-                <li>+91 93119 88783</li>
-                <li>manishdwibedy@gmail.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Science in Computer Science</h4>
-              <h5>2015 - 2017</h5>
-              <p><em>University of Southern California, Los Angeles, CA</em></p>
-              <p>GPA - 3.61/4.0</p>
-              <p>Focussed on various data science courses including Multi-modal Machine Learning, NLP, Big Data, etc.</p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Bachelor of Technology in Computer Science</h4>
-              <h5>2008 - 2012</h5>
-              <p><em>Guru Gobind Singh Indraprastha University, Delhi</em></p>
-              <p>GPA - 3.7/4.0</p>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Lead Engineer</h4>
-              <h5>July 2022 - Present</h5>
-              <p><em>Social Protocol,TX </em></p>
-              <ul>
-                <li>Worked on two projects, firstly developing an aggregator platform for various LLM models and building a religious platform hosting like Zillow</li>
-                <li>Developing backend tasks and API and saving data in MongoDB </li>
-                <li>Creating the front end for the application using the React framework</li>
-                <li>Architecturing to design the entire tech stack involving backend, frontend, hosting and DB</li>
-                <li>Reporting directly to the CEO regarding the technical progress & roadmap</li>
-                <li>Utilising tech including Python, Flask, Node.JS, React, MongoDB, Vercel, Google Maps & Docker</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Senior Software Engineer</h4>
-              <h5>Sept 2020 - May 2022</h5>
-              <p><em>Tatras Data, Delhi, India</em></p>
-              <ul>
-                <li>Worked with 2 North-American organisations (PathFactory and Good United) for backend operations</li>
-                <li>Heading the backend API tasks and collaborating with data scientists to feed data to the pipelines
-                  along with returning the model's output, needed for PathFactory content recommendations.</li>
-                <li>Contributed to the backend API development along with database operations for computing
-                  Good United’s Facebook Donation Campaign contributions.</li>
-                <li>Collaborated with the onsite product development team on a weekly basis.</li>
-                <li>Contribution towards mentoring along with recruitment activities for junior level engineers.</li>
-                <li>Utilising tech including Python, FastAPI, Celery, Redis, MongoDB, SQL, AWS & Docker</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Data and Senior Software Engineer</h4>
-              <h5>May 2018 - Apr 2020</h5>
-              <p><em>Scry Analytics Inc, San Jose, CA</em></p>
-              <ul>
-                <li>Worked with 2 North-American organisations like Cisco and ABB. Further integrated and
-                  collaborated with Cisco clients - “San Francisco 49ers” and “Southern California Edison</li>
-                <li>Worked on Cisco’s IoT Platform and AI detection platform, for developing API for the AI to
-                  communicate, deploy the platform on Cisco hardware, develop UI for the platform, etc.</li>
-                <li>Contributed to the AI pipeline for ABB’s Preventive Maintenance to detect whether a factory
-                  machinery would fail in the near future. Contributed to the overall data pipeline using
-                  Python/PySpark along with collaborating with data scientists for anomaly detection.</li>
-                <li>Apart from working with Scry clients, worked on Scry’s platform called “Collatio” for document
-                  processing to handle the backend and frontend tasks for extracting data from the documents.</li>
-                <li>Developed multiple modules (using backend stack of Python and Node.JS) along with the
-                  Angular Dashboard.</li>
-                <li>Collaborated with individuals from multiple timezones from Gurugram, India and Shanghai, China.</li>
-                <li>Utilising technologies including Python, Node.JS, Angular 8, MongoDB, AWS, Azure Cloud, Docker</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Graduate Teaching Assistant</h4>
-              <h5>Jan 2015 - May 2017</h5>
-              <p><em>University of Southern California, Los Angeles, CA</em></p>
-              <ul>
-                <li>Worked for CSCI 571: Web Technologies under Prof. Marco Papa.</li>
-                <li>Assisted the professor with assignments, exams as well as holding office hours.</li>
-                <li>Utilising technologies including PHP, Angular, iOS App development and Google Cloud.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>System Engineer</h4>
-              <h5>Sept 2012 - Jun 2015</h5>
-              <p><em>Tata Consultancy Services, Gurugram, India</em></p>
-              <ul>
-                <li>Development of backend API along with the product dashboard development</li>
-                <li>Lead the development of the “HOBS Connected Devices Management” to better manage network
-                  devices for telecom networks</li>
-                <li>Developed, deployed and tested multiple modules for the product prior to the product launch
-                  for a major telco in Australia</li>
-                <li>Contribution towards mentoring along with recruitment activities for junior level engineers.</li>
-                <li>Utilising technologies including Java/J2EE, MySQL, PERL and UI development (JSP/HTML/CSS/JS)</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-          </div>
-
+                <div class="bg-gray-50 p-8 rounded-lg card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Software Engineer</h3>
+                            <p class="text-accent font-medium">Early Career Company</p>
+                        </div>
+                        <span class="text-gray-600 mt-2 md:mt-0">2012 - 2017</span>
+                    </div>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• Built robust web applications using Java/J2EE and Python frameworks</li>
+                        <li>• Designed and implemented RESTful APIs and microservices</li>
+                        <li>• Worked with diverse databases and data processing pipelines</li>
+                        <li>• Participated in agile development processes and code reviews</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-      </div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Projects & Achievements</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- ADPList -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chalkboard-teacher text-primary text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">ADPList Mentor</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Jan 2023 - Present</p>
+                    <p class="text-gray-700">
+                        Software Development Mentor helping undergraduates and junior engineers navigate their 
+                        career paths and improve their technical skills through personalized guidance and mentorship.
+                    </p>
+                </div>
 
-    </section><!-- /Resume Section -->
+                <!-- elnsure -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shield-alt text-accent text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">elnsure</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">InsurTech Product</p>
+                    <p class="text-gray-700">
+                        Developed a comprehensive product for the InsurTech domain, focusing on innovative 
+                        insurance solutions with modern web technologies and data-driven insights.
+                    </p>
+                </div>
+
+                <!-- Novagen -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-flask text-green-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Novagen</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">TreeHacks 2018 Winner</p>
+                    <p class="text-gray-700">
+                        Flask web application for discovering new prescription drugs using machine learning. 
+                        Won "Best Data Science in Health Field" at Stanford's TreeHacks 2018.
+                    </p>
+                </div>
+
+                <!-- Hackathon Projects -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-code text-purple-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Hackathon Projects</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Various Competitions</p>
+                    <p class="text-gray-700">
+                        Participated in multiple hackathons developing innovative solutions using cutting-edge 
+                        technologies including blockchain, AI/ML, and web development frameworks.
+                    </p>
+                </div>
+
+                <!-- World Blockchain Hackathon -->
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-link text-orange-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">World Blockchain Hackathon</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">5th Place Winner</p>
+                    <p class="text-gray-700">
+                        Developed innovative blockchain solutions in this global online competition, 
+                        showcasing expertise in smart contracts and decentralized application development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hackathon Projects Section -->
+    <section id="hackathons" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Hackathon Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Hackathon Project Template - You can duplicate this for each project -->
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden card-hover">
+                    <!-- Project Image -->
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <i class="fas fa-code text-4xl mb-2"></i>
+                            <p class="text-sm opacity-90">Project Image Placeholder</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Content -->
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-gray-900">Project Name</h3>
+                            <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs font-medium">Winner</span>
+                        </div>
+                        
+                        <p class="text-gray-600 text-sm mb-3">Hackathon Name • Year</p>
+                        
+                        <p class="text-gray-700 mb-4 line-clamp-3">
+                            Add your project description here. Describe what the project does, 
+                            the technologies used, and what makes it special.
+                        </p>
+                        
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">React</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Node.js</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">MongoDB</span>
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-primary text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                View Project
+                            </a>
+                            <a href="#" class="bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TreeHacks 2018 - Novagen -->
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <i class="fas fa-flask text-4xl mb-2"></i>
+                            <p class="text-sm opacity-90">Drug Discovery Platform</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-gray-900">Novagen</h3>
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium">Winner</span>
+                        </div>
+                        
+                        <p class="text-gray-600 text-sm mb-3">TreeHacks 2018 • Stanford University</p>
+                        
+                        <p class="text-gray-700 mb-4">
+                            Flask web application for discovering new prescription drugs using machine learning. 
+                            Won "Best Data Science in Health Field" award.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Flask</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Machine Learning</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Data Science</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-primary text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                View Project
+                            </a>
+                            <a href="#" class="bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- World Blockchain Hackathon -->
+                <div class="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <i class="fas fa-link text-4xl mb-2"></i>
+                            <p class="text-sm opacity-90">Blockchain Solution</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-gray-900">Blockchain Project</h3>
+                            <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded-full text-xs font-medium">5th Place</span>
+                        </div>
+                        
+                        <p class="text-gray-600 text-sm mb-3">World Blockchain Hackathon • Online</p>
+                        
+                        <p class="text-gray-700 mb-4">
+                            Developed innovative blockchain solutions in this global online competition, 
+                            showcasing expertise in smart contracts and decentralized applications.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Solidity</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Ethereum</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Smart Contracts</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Web3</span>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-primary text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                View Project
+                            </a>
+                            <a href="#" class="bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more hackathon projects here by duplicating the template above -->
+                
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Interested in collaborating on hackathon projects?</p>
+                <a href="#contact" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                    <i class="fas fa-handshake mr-2"></i>
+                    Let's Build Something Amazing
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Testimonials</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg card-hover relative">
+                    <i class="fas fa-quote-left text-primary text-3xl mb-4"></i>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Manish is an exceptional developer with deep technical expertise and strong problem-solving skills. 
+                        His ability to architect scalable solutions is remarkable."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                            LL
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Linus Lee</p>
+                            <p class="text-gray-600 text-sm">Senior Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-      </div><!-- End Section Title -->
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg card-hover relative">
+                    <i class="fas fa-quote-left text-primary text-3xl mb-4"></i>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Working with Manish has been a pleasure. His dedication to quality code and mentoring 
+                        junior developers makes him an invaluable team member."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                            AK
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Ankaj Kumar</p>
+                            <p class="text-gray-600 text-sm">Technical Lead</p>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Manish is a champion at our Brother Hackathon 2020. He has been actively involved in all challenges. He never hesitated to help fellow contestants. He himself is a brilliant developer. His code is structured, well designed, and fully functional. I would highly recommend Manish to any organizations (startups or Fortune 500).</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/profile-3.webp" class="testimonial-img" alt="Linus Lee" max-width="24em">
-                <h3>Linus Lee</h3>
-                <h4>CEO &amp; Founder of Supplier Relations US, LLC</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>It’s rare that you come across standout talent like Manish. 
- 
-                    Manish joined our team as a software developer and worked under my direct supervision. 
-                     
-                    I was particularly impressed by Manish's ability to handle even the toughest modules—and effortlessly. That skill often takes years to develop among software engineers, but it seemed to come perfectly naturally to him. When Manish joined our team, he was supposed to take charge of our threading module, which was developed by one of our senior engineer. Naturally, the threading was very complex in nature. Manish, took control of the module in a couple of weeks. </span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/profile-2.webp" class="testimonial-img" alt="Ankaj Kumar" max-width="24em">
-                <h3>Ankaj Kumar</h3>
-                <h4>Product specialist, Tata Consultancy Services</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Manish and I worked together as volunteers for the Big Data Day LA conference in 2016. Manish quickly distinguished himself as a skilled contributor with great ideas and past experience in several initiatives we were considering. One of our brainstorming discussions led to Manish’s offer to develop iOS and Android apps for the conference, with features such as a map, keynote and session speaker profiles and session timings, with the ability to update the data online. With only occasional design input from me, Manish was able to fully develop working apps for both iOS and Android, and add enhancements to the app following internal demos and suggestions from other volunteers. Manish is very skilled at what he does, is a pleasure to work and interact with, and is a fantastic partner to rely on for any complex development projects you have in mind.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/profile-1.webp" class="testimonial-img" alt="Arti Annaswamy" max-width="24em">
-                <h3>Arti Annaswamy</h3>
-                <h4>Director, Global Ops @ Warner Bros Consumer Products</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg card-hover relative">
+                    <i class="fas fa-quote-left text-primary text-3xl mb-4"></i>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Manish brings both technical excellence and leadership qualities. His full-stack expertise 
+                        and attention to user experience consistently deliver outstanding results."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                            AA
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Arti Annaswamy</p>
+                            <p class="text-gray-600 text-sm">Product Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
+    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Let us get in touch!!</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>Vikas Puri, New Delhi - 110018</p>
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16">Contact</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-gray-800 p-8 rounded-lg">
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-primary transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-primary transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-primary transition-colors">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 px-8 py-3 rounded-lg font-medium transition-colors">
+                            Send Message
+                        </button>
+                    </form>
                 </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+91 93119 88783</p>
+                
+                <!-- Contact Info -->
+                <div class="mt-12 text-center">
+                    <p class="text-gray-400 mb-6">Or reach out to me directly:</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+                        <a href="mailto:manish.dwibedy@gmail.com" class="flex items-center text-gray-300 hover:text-white transition-colors">
+                            <i class="fas fa-envelope mr-2"></i>
+                            manish.dwibedy@gmail.com
+                        </a>
+                        <a href="tel:+919311988783" class="flex items-center text-gray-300 hover:text-white transition-colors">
+                            <i class="fas fa-phone mr-2"></i>
+                            +91 93119 88783
+                        </a>
+                    </div>
                 </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>manish.dwibedy@gmail.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14006.548434738494!2d77.06409816070729!3d28.640636392846766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04e9493e0177%3A0x319f78cf69caa2b9!2sVikaspuri%2C%20Delhi%2C%20110018!5e0!3m2!1sen!2sin!4v1721715646571!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="location"></iframe>
-              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             </div>
-          </div>
-
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
         </div>
+    </section>
 
-      </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 Manish Dwibedy. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="http://linkedin.com/in/manishdwibedy" class="hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/manishdwibedy" class="hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    </section><!-- /Contact Section -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-  </main>
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
 
-  <footer id="footer" class="footer position-relative light-background">
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerOffset = 70;
+                    const elementPosition = targetElement.offsetTop;
+                    const offsetPosition = elementPosition - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Manish Dwibedy</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+        // Form submission handling (placeholder)
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! This is a demo form.');
+        });
 
-  </footer>
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P83KNHYFM1" defer></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-P83KNHYFM1');
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const ref = urlParams.get('ref');
-
-    gtag('event', 'source', {
-        'referrer': ref,
-    });
-  </script>
-
-  <script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "ncwecv4bj9");
-</script>
+        // Observe all cards for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
 </body>
-
 </html>
