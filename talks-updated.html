@@ -528,8 +528,8 @@
                     pdfModal.style.display = 'block';
                     document.body.style.overflow = 'hidden';
                     const iframe = pdfModal.querySelector('iframe');
-                    // Use Google Docs viewer to embed PDF preview instead of direct raw GitHub URL to avoid download
-                    iframe.src = 'https://docs.google.com/gview?url=https://raw.githubusercontent.com/manishdwibedy/Portfolio/dev/RAG_Basics_to_Advanced.pdf&embedded=true';
+                    // Use Google Drive embed link for PDF preview
+                    iframe.src = 'https://drive.google.com/file/d/1WUsDmvspRMmiDCGSGj7he0lKtWiAmdCT/preview';
 
                 } else {
                     throw new Error('Email sending failed');
@@ -598,6 +598,9 @@
             // Instead of opening PDF modal directly, open email modal first
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
+            // Reset iframe src to avoid loading PDF before email submission
+            const iframe = pdfModal.querySelector('iframe');
+            iframe.src = '';
         });
 
         closePdfModal.addEventListener('click', () => {
