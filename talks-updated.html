@@ -474,7 +474,7 @@
         // Send email functionality
         // For dev testing: set this to true to skip email submission and directly open PDF modal
         const devSkipEmailSubmission = true;
-
+        const pdfPreviewLink = 'https://drive.google.com/file/d/1WUsDmvspRMmiDCGSGj7he0lKtWiAmdCT/preview';
         sendEmailBtn.addEventListener('click', async () => {
             if (devSkipEmailSubmission) {
                 // Directly open PDF modal for dev testing without submitting email
@@ -485,7 +485,7 @@
                 pdfModal.style.display = 'block';
                 document.body.style.overflow = 'hidden';
                 const iframe = pdfModal.querySelector('iframe');
-                iframe.src = 'https://drive.google.com/file/d/1WUsDmvspRMmiDCGSGj7he0lKtWiAmdCT/preview';
+                iframe.src = pdfPreviewLink;
                 return;
             }
 
@@ -529,7 +529,7 @@
                     document.body.style.overflow = 'hidden';
                     const iframe = pdfModal.querySelector('iframe');
                     // Use Google Drive embed link for PDF preview
-                    iframe.src = 'https://drive.google.com/file/d/1WUsDmvspRMmiDCGSGj7he0lKtWiAmdCT/preview';
+                    iframe.src = pdfPreviewLink;
 
                 } else {
                     throw new Error('Email sending failed');
