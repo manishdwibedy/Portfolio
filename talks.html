@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talks - Manish Dwibedy</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- EmailJS SDK for email functionality -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#64748b',
+                        'accent': '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold text-gray-900">Manish Dwibedy</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#hero" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="index.html#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+                    <a href="index.html#experience" class="text-gray-700 hover:text-primary transition-colors">Experience</a>
+                    <a href="index.html#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+                    <a href="index.html#hackathons" class="text-gray-700 hover:text-primary transition-colors">Hackathons</a>
+                    <a href="talks.html" class="text-primary font-semibold border-b-2 border-primary transition-colors">Talks</a>
+                    <a href="index.html#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="index.html#skills" class="block px-3 py-2 text-gray-700 hover:text-primary">Skills</a>
+                <a href="index.html#experience" class="block px-3 py-2 text-gray-700 hover:text-primary">Experience</a>
+                <a href="index.html#projects" class="block px-3 py-2 text-gray-700 hover:text-primary">Projects</a>
+                <a href="index.html#hackathons" class="block px-3 py-2 text-gray-700 hover:text-primary">Hackathons</a>
+                <a href="talks.html" class="block px-3 py-2 text-primary font-semibold border-b-2 border-primary">Talks</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg min-h-screen flex items-center justify-center text-white pt-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Talks & Presentations</h1>
+            <p class="text-xl md:text-2xl mb-6">Sharing Knowledge & Insights</p>
+            <p class="text-base md:text-lg mb-8 max-w-3xl mx-auto opacity-90 px-4">
+                A collection of talks, presentations, and workshops I've delivered on various technical topics,
+                including backend development, full-stack architecture, and emerging technologies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Talks Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Example Talk Card 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-microphone text-primary text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Building Scalable APIs with Python</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Tech Conference 2023 • San Francisco, CA</p>
+                    <p class="text-gray-700 mb-4">
+                        A comprehensive guide to designing and implementing high-performance APIs using Flask and FastAPI,
+                        covering best practices for scalability, security, and maintainability.
+                    </p>
+                    <div class="space-y-2">
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-file-alt mr-2"></i>View Notes
+                        </a>
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-link mr-2"></i>Resources & Slides
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Example Talk Card 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-server text-accent text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Microservices Architecture Patterns</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Developer Meetup 2023 • New Delhi, India</p>
+                    <p class="text-gray-700 mb-4">
+                        Exploring modern microservices patterns, containerization with Docker, and orchestration
+                        with Kubernetes for building resilient distributed systems.
+                    </p>
+                    <div class="space-y-2">
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-file-alt mr-2"></i>View Notes
+                        </a>
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-link mr-2"></i>Resources & Slides
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Example Talk Card 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-green-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Serverless Computing with AWS</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Cloud Summit 2022 • Virtual</p>
+                    <p class="text-gray-700 mb-4">
+                        Deep dive into serverless architecture using AWS Lambda, API Gateway, and DynamoDB.
+                        Learn how to build cost-effective and scalable applications.
+                    </p>
+                    <div class="space-y-2">
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-file-alt mr-2"></i>View Notes
+                        </a>
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-link mr-2"></i>Resources & Slides
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Example Talk Card 4 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-database text-purple-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Database Design & Optimization</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Database Conference 2022 • Mumbai, India</p>
+                    <p class="text-gray-700 mb-4">
+                        Best practices for database design, indexing strategies, and performance optimization
+                        techniques for PostgreSQL and MongoDB.
+                    </p>
+                    <div class="space-y-2">
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-file-alt mr-2"></i>View Notes
+                        </a>
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-link mr-2"></i>Resources & Slides
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Example Talk Card 5 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-brain text-orange-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">AI/ML in Backend Systems</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">AI Summit 2021 • Bangalore, India</p>
+                    <p class="text-gray-700 mb-4">
+                        Integrating machine learning models into backend services, covering model deployment,
+                        inference optimization, and real-time prediction systems.
+                    </p>
+                    <div class="space-y-2">
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-file-alt mr-2"></i>View Notes
+                        </a>
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-link mr-2"></i>Resources & Slides
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Example Talk Card 6 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-code text-red-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Full-Stack Development Best Practices</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Developer Workshop 2021 • Virtual</p>
+                    <p class="text-gray-700 mb-4">
+                        Comprehensive workshop covering modern full-stack development practices, from frontend
+                        frameworks to backend APIs and deployment strategies.
+                    </p>
+                    <div class="space-y-2">
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-file-alt mr-2"></i>View Notes
+                        </a>
+                        <a href="#" class="text-primary hover:underline block">
+                            <i class="fas fa-link mr-2"></i>Resources & Slides
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Interested in having me speak at your event?</p>
+                <a href="index.html#contact" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 Manish Dwibedy. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="http://linkedin.com/in/manishdwibedy" class="hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/manishdwibedy" class="hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
