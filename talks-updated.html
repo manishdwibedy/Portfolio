@@ -179,7 +179,7 @@
                             <h2 class="text-xl font-semibold">RAG Basics to Advanced - Slides Preview</h2>
                         </div>
                         <div class="modal-body" style="height: calc(100% - 80px);">
-                            <iframe src="https://raw.githubusercontent.com/manishdwibedy/Portfolio/dev/RAG_Basics_to_Advanced.pdf#toolbar=0&navpanes=0" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+                            <iframe style="width: 100%; height: 100%;" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -566,17 +566,23 @@
         viewPdfBtn.addEventListener('click', () => {
             pdfModal.style.display = 'block';
             document.body.style.overflow = 'hidden';
+            const iframe = pdfModal.querySelector('iframe');
+            iframe.src = 'https://raw.githubusercontent.com/manishdwibedy/Portfolio/dev/RAG_Basics_to_Advanced.pdf#toolbar=0&navpanes=0';
         });
 
         closePdfModal.addEventListener('click', () => {
             pdfModal.style.display = 'none';
             document.body.style.overflow = 'auto';
+            const iframe = pdfModal.querySelector('iframe');
+            iframe.src = '';
         });
 
         window.addEventListener('click', (e) => {
             if (e.target === pdfModal) {
                 pdfModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
+                const iframe = pdfModal.querySelector('iframe');
+                iframe.src = '';
             }
         });
     </script>
