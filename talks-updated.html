@@ -472,7 +472,30 @@
         });
 
         // Send email functionality
+        // For dev testing: set this to true to skip email submission and directly open PDF modal
+        const devSkipEmailSubmission = true;
+
         sendEmailBtn.addEventListener('click', async () => {
+            if (devSkipEmailSubmission) {
+                // Directly open PDF modal for dev testing without submitting email
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                emailForm.reset();
+
+                pdfModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                const iframe = pdfModal.querySelector('iframe');
+                iframe.src = 'https://docs.google.com/gview?url=https://raw.githubusercontent.com/manishdwibedy/Portfolio/dev/RAG_Basics_to_Advanced.pdf&embedded=true';
+                return;
+            }
+
+            // Show the email modal form if not already visible
+            if (modal.style.display !== 'block') {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                return;
+            }
+
             const email = userEmail.value.trim();
 
             if (!email) {
@@ -500,6 +523,14 @@
                     modal.style.display = 'none';
                     document.body.style.overflow = 'auto';
                     emailForm.reset();
+
+                    // Trigger PDF modal to open and load PDF after successful email send
+                    pdfModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                    const iframe = pdfModal.querySelector('iframe');
+                    // Use Google Docs viewer to embed PDF preview instead of direct raw GitHub URL to avoid download
+                    iframe.src = 'https://docs.google.com/gview?url=https://raw.githubusercontent.com/manishdwibedy/Portfolio/dev/RAG_Basics_to_Advanced.pdf&embedded=true';
+
                 } else {
                     throw new Error('Email sending failed');
                 }
@@ -564,10 +595,9 @@
         const closePdfModal = document.getElementById('closePdfModal');
 
         viewPdfBtn.addEventListener('click', () => {
-            pdfModal.style.display = 'block';
+            // Instead of opening PDF modal directly, open email modal first
+            modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
-            const iframe = pdfModal.querySelector('iframe');
-            iframe.src = 'https://raw.githubusercontent.com/manishdwibedy/Portfolio/dev/RAG_Basics_to_Advanced.pdf#toolbar=0&navpanes=0';
         });
 
         closePdfModal.addEventListener('click', () => {
