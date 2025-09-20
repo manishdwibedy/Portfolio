@@ -499,8 +499,16 @@
 
             const email = userEmail.value.trim();
 
+            // Email validation using regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
             if (!email) {
-                alert('Please enter a valid email address.');
+                alert('Please enter an email address.');
+                return;
+            }
+
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address (e.g., your.email@example.com).');
                 return;
             }
 
