@@ -61,6 +61,72 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 0;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            animation: modalFadeIn 0.3s ease-out;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .modal-body {
+            padding: 24px;
+        }
+
+        .modal-footer {
+            padding: 0 24px 24px 24px;
+            text-align: right;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: -8px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -105,140 +171,100 @@
     <!-- Hero Section -->
     <section class="gradient-bg min-h-screen flex items-center justify-center text-white pt-20">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">Talks & Presentations</h1>
-            <p class="text-xl md:text-2xl mb-6">Sharing Knowledge & Insights</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Beyond the Prompt: A Deep Dive into RAG</h1>
+            <p class="text-lg md:text-xl mb-6 text-accent font-medium">Current Talk</p>
             <p class="text-base md:text-lg mb-8 max-w-3xl mx-auto opacity-90 px-4">
-                A collection of talks, presentations, and workshops I've delivered on various technical topics,
-                including backend development, full-stack architecture, and emerging technologies.
+                This talk will explore Retrieval-Augmented Generation (RAG) as a powerful solution to the limitations of traditional LLM prompting, such as hallucination and outdated knowledge. We will provide a deep dive into the RAG architecture, breaking down each component from data ingestion and chunking to vector embedding, retrieval, and generation. The session will go beyond basic concepts, exploring advanced retrieval techniques like hybrid and re-ranking search, and discuss practical strategies for optimizing performance. We'll conclude with real-world applications and a look at the future of RAG.
             </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button id="viewPdfBtn" class="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors inline-flex items-center">
+                    <i class="fas fa-file-pdf mr-2"></i>View Slides (PDF)
+                </button>
+
+                <!-- Modal for PDF preview -->
+                <div id="pdfModal" class="modal" style="display:none;">
+                    <div class="modal-content" style="max-width: 90%; height: 90vh;">
+                        <div class="modal-header">
+                            <span class="close" id="closePdfModal">&times;</span>
+                            <h2 class="text-xl font-semibold">RAG Basics to Advanced - Slides Preview</h2>
+                        </div>
+                        <div class="modal-body" style="height: calc(100% - 80px);">
+                            <iframe style="width: 100%; height: 100%;" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <a href="#talks" class="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-primary transition-colors mb-2.5 sm:mb-0">
+                    Explore Past Talks
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Talks Section -->
-    <section class="py-20 bg-white">
+    <section id="talks" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Example Talk Card 1 -->
+                <!-- Talk Card 1 - IoT Development with ESP32 -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-microphone text-primary text-2xl mr-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-900">Building Scalable APIs with Python</h3>
+                        <i class="fas fa-microchip text-primary text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Experience IoT Development using ESP32</h3>
                     </div>
-                    <p class="text-gray-600 mb-2">Tech Conference 2023 • San Francisco, CA</p>
+                    <p class="text-gray-600 mb-2">D2D Conference 2024 • Delhi Technological University, Delhi</p>
                     <p class="text-gray-700 mb-4">
-                        A comprehensive guide to designing and implementing high-performance APIs using Flask and FastAPI,
-                        covering best practices for scalability, security, and maintainability.
+                        Comprehensive session on IoT development using ESP32 microcontrollers, covering hardware integration,
+                        sensor interfacing, wireless communication protocols, and real-world applications in smart devices
+                        and automation systems.
                     </p>
                     <div class="space-y-2">
-                        <a href="#" class="text-primary hover:underline block">
+                        <a href="#" class="text-primary hover:underline block notes-link" data-talk="Experience IoT Development using ESP32" data-type="notes">
                             <i class="fas fa-file-alt mr-2"></i>View Notes
                         </a>
-                        <a href="#" class="text-primary hover:underline block">
+                        <a href="#" class="text-primary hover:underline block resources-link" data-talk="Experience IoT Development using ESP32" data-type="resources">
                             <i class="fas fa-link mr-2"></i>Resources & Slides
                         </a>
                     </div>
                 </div>
 
-                <!-- Example Talk Card 2 -->
+                <!-- Talk Card 2 - How the Internet Works -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-server text-accent text-2xl mr-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-900">Microservices Architecture Patterns</h3>
+                        <i class="fas fa-network-wired text-accent text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">How the Internet Works: A Deep Dive</h3>
                     </div>
-                    <p class="text-gray-600 mb-2">Developer Meetup 2023 • New Delhi, India</p>
+                    <p class="text-gray-600 mb-2">Winterlude Conference 2023 • Multiple GDSCs, Delhi NCR</p>
                     <p class="text-gray-700 mb-4">
-                        Exploring modern microservices patterns, containerization with Docker, and orchestration
-                        with Kubernetes for building resilient distributed systems.
+                        Technical session explaining internet protocols, data transmission, networking fundamentals,
+                        and backend infrastructure. Covered HTTP/HTTPS, TCP/IP, DNS, and modern web architecture
+                        patterns for developers.
                     </p>
                     <div class="space-y-2">
-                        <a href="#" class="text-primary hover:underline block">
+                        <a href="#" class="text-primary hover:underline block notes-link" data-talk="How the Internet Works: A Deep Dive" data-type="notes">
                             <i class="fas fa-file-alt mr-2"></i>View Notes
                         </a>
-                        <a href="#" class="text-primary hover:underline block">
+                        <a href="#" class="text-primary hover:underline block resources-link" data-talk="How the Internet Works: A Deep Dive" data-type="resources">
                             <i class="fas fa-link mr-2"></i>Resources & Slides
                         </a>
                     </div>
                 </div>
 
-                <!-- Example Talk Card 3 -->
+                <!-- Talk Card 3 - Supply Chain with Blockchain, IoT, AI -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-cloud text-green-600 text-2xl mr-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-900">Serverless Computing with AWS</h3>
+                        <i class="fab fa-bitcoin text-green-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Building Next-Gen Supply Chain Management with Blockchain, IoT & AI</h3>
                     </div>
-                    <p class="text-gray-600 mb-2">Cloud Summit 2022 • Virtual</p>
+                    <p class="text-gray-600 mb-2">GDG DevFest 2022 • GDG Noida</p>
                     <p class="text-gray-700 mb-4">
-                        Deep dive into serverless architecture using AWS Lambda, API Gateway, and DynamoDB.
-                        Learn how to build cost-effective and scalable applications.
+                        Advanced session on implementing blockchain-based supply chain solutions with IoT tracking
+                        and AI optimization. Covered distributed ledger technology, real-time asset tracking,
+                        predictive analytics, and smart contract implementation for supply chain resilience.
                     </p>
                     <div class="space-y-2">
-                        <a href="#" class="text-primary hover:underline block">
+                        <a href="#" class="text-primary hover:underline block notes-link" data-talk="Building Next-Gen Supply Chain Management with Blockchain, IoT & AI" data-type="notes">
                             <i class="fas fa-file-alt mr-2"></i>View Notes
                         </a>
-                        <a href="#" class="text-primary hover:underline block">
-                            <i class="fas fa-link mr-2"></i>Resources & Slides
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Example Talk Card 4 -->
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-database text-purple-600 text-2xl mr-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-900">Database Design & Optimization</h3>
-                    </div>
-                    <p class="text-gray-600 mb-2">Database Conference 2022 • Mumbai, India</p>
-                    <p class="text-gray-700 mb-4">
-                        Best practices for database design, indexing strategies, and performance optimization
-                        techniques for PostgreSQL and MongoDB.
-                    </p>
-                    <div class="space-y-2">
-                        <a href="#" class="text-primary hover:underline block">
-                            <i class="fas fa-file-alt mr-2"></i>View Notes
-                        </a>
-                        <a href="#" class="text-primary hover:underline block">
-                            <i class="fas fa-link mr-2"></i>Resources & Slides
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Example Talk Card 5 -->
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-brain text-orange-600 text-2xl mr-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-900">AI/ML in Backend Systems</h3>
-                    </div>
-                    <p class="text-gray-600 mb-2">AI Summit 2021 • Bangalore, India</p>
-                    <p class="text-gray-700 mb-4">
-                        Integrating machine learning models into backend services, covering model deployment,
-                        inference optimization, and real-time prediction systems.
-                    </p>
-                    <div class="space-y-2">
-                        <a href="#" class="text-primary hover:underline block">
-                            <i class="fas fa-file-alt mr-2"></i>View Notes
-                        </a>
-                        <a href="#" class="text-primary hover:underline block">
-                            <i class="fas fa-link mr-2"></i>Resources & Slides
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Example Talk Card 6 -->
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-code text-red-600 text-2xl mr-3"></i>
-                        <h3 class="text-xl font-semibold text-gray-900">Full-Stack Development Best Practices</h3>
-                    </div>
-                    <p class="text-gray-600 mb-2">Developer Workshop 2021 • Virtual</p>
-                    <p class="text-gray-700 mb-4">
-                        Comprehensive workshop covering modern full-stack development practices, from frontend
-                        frameworks to backend APIs and deployment strategies.
-                    </p>
-                    <div class="space-y-2">
-                        <a href="#" class="text-primary hover:underline block">
-                            <i class="fas fa-file-alt mr-2"></i>View Notes
-                        </a>
-                        <a href="#" class="text-primary hover:underline block">
+                        <a href="#" class="text-primary hover:underline block resources-link" data-talk="Building Next-Gen Supply Chain Management with Blockchain, IoT & AI" data-type="resources">
                             <i class="fas fa-link mr-2"></i>Resources & Slides
                         </a>
                     </div>
@@ -255,6 +281,68 @@
             </div>
         </div>
     </section>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="closeModal">&times;</span>
+                <h2 class="text-xl font-semibold">Request <span id="resourceType">Notes</span></h2>
+                <p class="text-sm opacity-90 mt-2" id="talkTitle">Talk Title</p>
+            </div>
+            <div class="modal-body">
+                <p class="text-gray-700 mb-4">
+                    Enter your email address below and we'll send you the <span id="resourceTypeText">notes</span> for this talk.
+                </p>
+                <form id="emailForm">
+                    <div class="mb-4">
+                        <label for="userEmail" class="block text-sm font-medium text-gray-700 mb-2">
+                            Email Address *
+                        </label>
+                        <input
+                            type="email"
+                            id="userEmail"
+                            name="userEmail"
+                            required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                            placeholder="your.email@example.com"
+                        >
+                    </div>
+                    <div class="mb-4">
+                        <label for="userName" class="block text-sm font-medium text-gray-700 mb-2">
+                            Your Name (Optional)
+                        </label>
+                        <input
+                            type="text"
+                            id="userName"
+                            name="userName"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                            placeholder="John Doe"
+                        >
+                    </div>
+                    <div class="text-sm text-gray-600">
+                        <p>* Required field</p>
+                        <p class="mt-1">We'll only use this email to send you the requested materials.</p>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button
+                    id="sendEmailBtn"
+                    class="bg-primary text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    Send to My Email
+                </button>
+                <button
+                    id="cancelBtn"
+                    class="ml-3 bg-gray-300 text-gray-700 px-6 py-2 rounded-md hover:bg-gray-400 transition-colors font-medium"
+                >
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-gray-400 py-8 border-t border-gray-700">
@@ -274,6 +362,148 @@
     </footer>
 
     <script>
+        // Modal functionality
+        const modal = document.getElementById('emailModal');
+        const closeModal = document.getElementById('closeModal');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const sendEmailBtn = document.getElementById('sendEmailBtn');
+        const emailForm = document.getElementById('emailForm');
+        const userEmail = document.getElementById('userEmail');
+        const userName = document.getElementById('userName');
+        const resourceType = document.getElementById('resourceType');
+        const resourceTypeText = document.getElementById('resourceTypeText');
+        const talkTitle = document.getElementById('talkTitle');
+
+        let currentTalk = '';
+        let currentType = '';
+
+        // Open modal when clicking notes or resources links
+        document.querySelectorAll('.notes-link, .resources-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentTalk = link.getAttribute('data-talk');
+                currentType = link.getAttribute('data-type');
+
+                // Update modal content
+                talkTitle.textContent = currentTalk;
+                if (currentType === 'notes') {
+                    resourceType.textContent = 'Notes';
+                    resourceTypeText.textContent = 'notes';
+                } else {
+                    resourceType.textContent = 'Resources & Slides';
+                    resourceTypeText.textContent = 'resources and slides';
+                }
+
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal functions
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            emailForm.reset();
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            emailForm.reset();
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                emailForm.reset();
+            }
+        });
+
+        // Send email functionality
+        // For dev testing: set this to true to skip email submission and directly open PDF modal
+        const devSkipEmailSubmission = false;
+
+        const pdfPreviewLink = 'https://drive.google.com/file/d/1VtwI6ytCrhd1fcCb2iUsTrfdKcpHgApM/preview';
+        sendEmailBtn.addEventListener('click', async () => {
+            if (devSkipEmailSubmission) {
+                // Directly open PDF modal for dev testing without submitting email
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                emailForm.reset();
+
+                pdfModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                const iframe = pdfModal.querySelector('iframe');
+                iframe.src = pdfPreviewLink;
+                return;
+            }
+
+            // Show the email modal form if not already visible
+            if (modal.style.display !== 'block') {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                return;
+            }
+
+            const email = userEmail.value.trim();
+
+            // Email validation using regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!email) {
+                alert('Please enter an email address.');
+                return;
+            }
+
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address (e.g., your.email@example.com).');
+                return;
+            }
+
+            // Disable button during sending
+            sendEmailBtn.disabled = true;
+            sendEmailBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+
+            try {
+                // Initialize EmailJS
+                emailjs.init('kVm2TpWzSlOH5hpNd');
+
+                // Send email using EmailJS
+                const result = await emailjs.send(
+                    'service_tnkvjfb',
+                    'template_b84gibf',
+                    { email: email }
+                );
+
+                if (result.status === 200) {
+                    alert(`Success! The ${currentType} for "${currentTalk}" have been sent to ${email}. Please check your email (including spam folder).`);
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    emailForm.reset();
+
+                    // Trigger PDF modal to open and load PDF after successful email send
+                    pdfModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                    const iframe = pdfModal.querySelector('iframe');
+                    // Use Google Drive embed link for PDF preview
+                    iframe.src = pdfPreviewLink;
+
+                } else {
+                    throw new Error('Email sending failed');
+                }
+
+            } catch (error) {
+                console.error('Email sending error:', error);
+                alert('Sorry, there was an error sending the email. Please try again later or contact me directly.');
+            } finally {
+                // Re-enable button
+                sendEmailBtn.disabled = false;
+                sendEmailBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Send to My Email';
+            }
+        });
+
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -314,6 +544,38 @@
                 card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(card);
             });
+        });
+    </script>
+
+    <script>
+        // PDF modal functionality
+        const viewPdfBtn = document.getElementById('viewPdfBtn');
+        const pdfModal = document.getElementById('pdfModal');
+        const closePdfModal = document.getElementById('closePdfModal');
+
+        viewPdfBtn.addEventListener('click', () => {
+            // Instead of opening PDF modal directly, open email modal first
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            // Reset iframe src to avoid loading PDF before email submission
+            const iframe = pdfModal.querySelector('iframe');
+            iframe.src = '';
+        });
+
+        closePdfModal.addEventListener('click', () => {
+            pdfModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            const iframe = pdfModal.querySelector('iframe');
+            iframe.src = '';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === pdfModal) {
+                pdfModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                const iframe = pdfModal.querySelector('iframe');
+                iframe.src = '';
+            }
         });
     </script>
 </body>
