@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms and Conditions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 font-inter">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold text-gray-900">Manish Dwibedy</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="services.html" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+                    <a href="terms.html" class="text-primary font-semibold transition-colors">Terms & Conditions</a>
+                    <a href="refund.html" class="text-gray-700 hover:text-primary transition-colors">Refund Policy</a>
+                    <a href="privacy.html" class="text-gray-700 hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="talks.html" class="text-gray-700 hover:text-primary transition-colors">Talks</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Services</a>
+                <a href="terms.html" class="block px-3 py-2 text-primary font-semibold">Terms & Conditions</a>
+                <a href="refund.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Refund Policy</a>
+                <a href="privacy.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Privacy Policy</a>
+                <a href="talks.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Talks</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-20 mt-16">
+        <h1 class="text-4xl font-bold mb-8 text-gray-900">Terms and Conditions</h1>
+        <section class="prose max-w-none text-gray-700">
+            <p>Welcome to our website. By accessing or using our services, you agree to be bound by these Terms and Conditions. Please read them carefully.</p>
+            <h2>1. Use of Services</h2>
+            <p>You agree to use our services only for lawful purposes and in a way that does not infringe the rights of others or restrict their use and enjoyment of the services.</p>
+            <h2>2. Enrollment and Payment</h2>
+            <p>Enrollment in our courses requires payment as specified on the Services page. All payments are non-refundable except as outlined in our Refund Policy.</p>
+            <h2>3. Course Access</h2>
+            <p>Course access is granted for a period of 3 years from the date of enrollment. We reserve the right to modify course content and schedules.</p>
+            <h2>4. Intellectual Property</h2>
+            <p>All course materials and content are the intellectual property of the provider and may not be copied, distributed, or used without permission.</p>
+            <h2>5. Limitation of Liability</h2>
+            <p>We are not liable for any damages arising from the use or inability to use our services.</p>
+            <h2>6. Changes to Terms</h2>
+            <p>We reserve the right to update these Terms and Conditions at any time. Continued use of the services constitutes acceptance of the updated terms.</p>
+            <h2>Contact Us</h2>
+            <p>If you have any questions about these Terms and Conditions, please contact us at manish.dwibedy@gmail.com.</p>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
