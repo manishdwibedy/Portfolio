@@ -1,11 +1,11 @@
-module.exports = {
-  content: ["./*.html", "./*.js"],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {
-      colors: {
-        accent: '#1e3a8a', // This fixes your contrast ratio issue (Dark Blue)
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }
