@@ -7,7 +7,18 @@
     @apply block; /* Tailwind way */
     /* or just regular CSS: display: block; */
   }
+
+  /* Fix for the H1UserAgentFontSizeInSection warning */
+  h1 {
+    @apply text-4xl font-bold; /* Explicitly set size */
+  }
+  section h1 {
+    @apply text-4xl; /* Prevents deprecated auto-shrinking */
+  }
 }
+
+
+
 
 .gradient-bg {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
