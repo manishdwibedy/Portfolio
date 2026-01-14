@@ -1,7 +1,10 @@
-// vite.config.js
 import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  // If your URL is https://<user>.github.io/<repo>/, set base to '/<repo>/'
+  plugins: [
+    tailwindcss(),
+  ],
+  // This ensures your site works on manishd.in
   base: '/', 
 })

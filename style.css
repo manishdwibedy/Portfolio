@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@reference "tailwindcss";
 
 @layer base {
   body {
@@ -16,8 +15,6 @@
     @apply text-4xl; /* Prevents deprecated auto-shrinking */
   }
 }
-
-
 
 
 .gradient-bg {
