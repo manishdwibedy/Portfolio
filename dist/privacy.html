@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 font-inter">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold text-gray-900">Manish Dwibedy</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="services.html" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+                    <a href="terms.html" class="text-gray-700 hover:text-primary transition-colors">Terms & Conditions</a>
+                    <a href="refund.html" class="text-gray-700 hover:text-primary transition-colors">Refund Policy</a>
+                    <a href="privacy.html" class="text-primary font-semibold transition-colors">Privacy Policy</a>
+                    <a href="talks.html" class="text-gray-700 hover:text-primary transition-colors">Talks</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Services</a>
+                <a href="terms.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Terms & Conditions</a>
+                <a href="refund.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Refund Policy</a>
+                <a href="privacy.html" class="block px-3 py-2 text-primary font-semibold">Privacy Policy</a>
+                <a href="talks.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Talks</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-20 mt-16">
+        <h1 class="text-4xl font-bold mb-8 text-gray-900">Privacy Policy</h1>
+        <section class="prose max-w-none text-gray-700">
+            <h2>1. Information We Collect</h2>
+            <p>We collect the following types of information:</p>
+            <ul>
+                <li><strong>Personal Identification Information:</strong> Name, email address, phone number.</li>
+                <li><strong>Professional/Academic Information:</strong> To verify your enrollment tier, we collect information regarding your student status, professional experience (years, roles), and related documentation.</li>
+                <li><strong>Usage Data:</strong> Information about how you access and use the Course, including login times, pages viewed, videos watched, and performance on assessments.</li>
+                <li><strong>Payment Information:</strong> Payment details (though typically processed by a third-party processor, we retain transaction records).</li>
+            </ul>
+            <h2>2. How We Use Your Information</h2>
+            <p>We use the collected data for the following purposes:</p>
+            <ul>
+                <li><strong>To provide the Course:</strong> To manage your access to live classes, support, and course materials.</li>
+                <li><strong>To verify eligibility:</strong> To confirm your professional experience or student status matches the enrollment tier you selected.</li>
+                <li><strong>Communication:</strong> To send you updates, course notifications, and respond to your inquiries.</li>
+                <li><strong>Improvement:</strong> To monitor and analyze usage to improve the quality, content, and delivery of the Course.</li>
+            </ul>
+            <h2>3. Data Sharing and Disclosure</h2>
+            <p>We do not sell your personal information. We may share your data only in the following limited circumstances:</p>
+            <ul>
+                <li><strong>Service Providers:</strong> With third-party vendors who perform services on our behalf, such as payment processing, hosting, and virtual classroom platforms. These vendors are required to protect your information.</li>
+                <li><strong>Legal Requirements:</strong> When required by law or in response to valid requests by public authorities (e.g., a court order or government agency).</li>
+            </ul>
+            <h2>4. Data Security</h2>
+            <p>We implement reasonable security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
+            <h2>5. Data Retention</h2>
+            <p>We will retain your personal data for as long as your account is active (the 3-year access period) and for a reasonable period thereafter to comply with our legal obligations, resolve disputes, and enforce our agreements.</p>
+            <h2>6. Contact Information</h2>
+            <p>If you have any questions about these policies, please contact us at:</p>
+            <p>Ajitha Tech (OPC) Pvt. Ltd.</p>
+            <p>support@manishd.in</p>
+            <p>New Delhi</p>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

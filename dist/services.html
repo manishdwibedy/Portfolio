@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skills Training Services - Manish Dwibedy</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#64748b',
+                        'accent': '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-11FHXVYGD7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-11FHXVYGD7');
+</script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-tag {
+            transition: all 0.2s ease;
+        }
+        
+        .skill-tag:hover {
+            transform: scale(1.05);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .typing-animation {
+            overflow: hidden;
+            border-right: 2px solid #667eea;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #667eea; }
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold text-gray-900">Manish Dwibedy</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="services.html" class="text-primary font-semibold">Services</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="index.html#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+                    <a href="index.html#experience" class="text-gray-700 hover:text-primary transition-colors">Experience</a>
+                    <a href="index.html#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+                    <a href="index.html#hackathons" class="text-gray-700 hover:text-primary transition-colors">Hackathons</a>
+                    <a href="talks.html" class="text-gray-700 hover:text-primary transition-colors">Talks</a>
+                    <a href="index.html#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-primary font-semibold">Services</a>
+                <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                <a href="index.html#skills" class="block px-3 py-2 text-gray-700 hover:text-primary">Skills</a>
+                <a href="index.html#experience" class="block px-3 py-2 text-gray-700 hover:text-primary">Experience</a>
+                <a href="index.html#projects" class="block px-3 py-2 text-gray-700 hover:text-primary">Projects</a>
+                <a href="index.html#hackathons" class="block px-3 py-2 text-gray-700 hover:text-primary">Hackathons</a>
+                <a href="talks.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Talks</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg min-h-screen flex items-center justify-center text-white pt-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-3 sm:mb-4">AI Skills Training</h1>
+            <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-4 typing-animation">Master Generative AI & Core AI Technologies</p>
+            <p class="text-base md:text-lg mb-8 max-w-3xl mx-auto opacity-90 px-4">
+                Join our comprehensive virtual training program designed to equip you with cutting-edge AI skills. 
+                Learn from industry experts through interactive live sessions and get ongoing support to advance your career.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#pricing" class="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                    View Pricing
+                </a>
+                <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-primary transition-colors">
+                    Enroll Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Overview Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Course Overview</h2>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-900">What You'll Learn</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-brain text-primary mr-3 mt-1"></i>
+                            <span>Generative AI fundamentals and advanced techniques</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-cogs text-accent mr-3 mt-1"></i>
+                            <span>Core AI concepts including machine learning and deep learning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-code text-green-600 mr-3 mt-1"></i>
+                            <span>Hands-on implementation with industry-standard tools</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-users text-purple-600 mr-3 mt-1"></i>
+                            <span>Real-world applications and case studies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-rocket text-orange-600 mr-3 mt-1"></i>
+                            <span>Career guidance and industry insights</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-900">Program Details</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-video text-primary w-6"></i>
+                            <span class="ml-3 text-gray-700">Virtual live classes</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-accent w-6"></i>
+                            <span class="ml-3 text-gray-700">6 months of intensive training</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-life-ring text-green-600 w-6"></i>
+                            <span class="ml-3 text-gray-700">6 months of post-training support</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt text-purple-600 w-6"></i>
+                            <span class="ml-3 text-gray-700">Available for 3 years from enrollment</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate text-orange-600 w-6"></i>
+                            <span class="ml-3 text-gray-700">Completion certificate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Pricing Plans</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Student Plan -->
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover border-2 border-gray-200">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Student</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">₹101</div>
+                        <p class="text-gray-600">One-time payment</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Full access to all modules</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">6 months live classes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">6 months support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Certificate of completion</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Access for 3 years</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                        Enroll as Student
+                    </button>
+                </div>
+
+                <!-- Professional < 3 Years -->
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover border-2 border-primary relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Professional</h3>
+                        <p class="text-gray-600 mb-2">Less than 3 years experience</p>
+                        <div class="text-4xl font-bold text-primary mb-2">₹1,100</div>
+                        <p class="text-gray-600">One-time payment</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Everything in Student plan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Advanced career guidance</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">1-on-1 mentoring sessions</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Industry networking opportunities</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Priority support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                        Enroll as Professional
+                    </button>
+                </div>
+
+                <!-- Professional >= 3 Years -->
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover border-2 border-gray-200">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Expert</h3>
+                        <p class="text-gray-600 mb-2">3+ years experience</p>
+                        <div class="text-4xl font-bold text-primary mb-2">₹11,000</div>
+                        <p class="text-gray-600">One-time payment</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Everything in Professional plan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Executive-level mentoring</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Custom project development</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Direct access to industry leaders</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Lifetime support & updates</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                        Enroll as Expert
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Why Choose Our Program?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center card-hover">
+                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chalkboard-teacher text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Expert Instructors</h3>
+                    <p class="text-gray-600">Learn from industry veterans with years of real-world AI experience.</p>
+                </div>
+                <div class="text-center card-hover">
+                    <div class="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-laptop-code text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Hands-on Learning</h3>
+                    <p class="text-gray-600">Practical projects and real-world applications throughout the course.</p>
+                </div>
+                <div class="text-center card-hover">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Community Support</h3>
+                    <p class="text-gray-600">Join a network of AI enthusiasts and get ongoing support.</p>
+                </div>
+                <div class="text-center card-hover">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-trophy text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Career Advancement</h3>
+                    <p class="text-gray-600">Skills that open doors to high-demand AI roles and opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16">Ready to Start Your AI Journey?</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-gray-800 p-8 rounded-lg">
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-primary transition-colors text-white">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-primary transition-colors text-white">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="experience" class="block text-sm font-medium mb-2">Years of Experience</label>
+                            <select id="experience" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-primary transition-colors text-white">
+                                <option value="">Select your experience level</option>
+                                <option value="student">Student</option>
+                                <option value="0-3">0-3 years</option>
+                                <option value="3+">3+ years</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none text-white" placeholder="Tell us about your goals..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 px-8 py-3 rounded-lg font-medium transition-colors">
+                            Start Your Enrollment
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="mt-12 text-center">
+                    <p class="text-gray-400 mb-6">Have questions? Reach out to us:</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+                        <a href="mailto:manish.dwibedy@gmail.com" class="flex items-center text-gray-300 hover:text-white transition-colors">
+                            <i class="fas fa-envelope mr-2"></i>
+                            manish.dwibedy@gmail.com
+                        </a>
+                        <a href="tel:+919311988783" class="flex items-center text-gray-300 hover:text-white transition-colors">
+                            <i class="fas fa-phone mr-2"></i>
+                            +91 93119 88783
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 Manish Dwibedy. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms</a>
+                <a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy</a>
+                <a href="refund.html" class="text-gray-400 hover:text-white transition-colors">Refunds</a>
+                <a href="http://linkedin.com/in/manishdwibedy" class="hover:text-white transition-colors">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="https://github.com/manishdwibedy" class="hover:text-white transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerOffset = 70;
+                    const elementPosition = targetElement.offsetTop;
+                    const offsetPosition = elementPosition - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission handling (placeholder)
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your interest! We will contact you soon.');
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

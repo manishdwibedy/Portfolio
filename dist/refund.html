@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Refund Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 font-inter">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold text-gray-900">Manish Dwibedy</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="services.html" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+                    <a href="terms.html" class="text-gray-700 hover:text-primary transition-colors">Terms & Conditions</a>
+                    <a href="refund.html" class="text-primary font-semibold transition-colors">Refund Policy</a>
+                    <a href="privacy.html" class="text-gray-700 hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="talks.html" class="text-gray-700 hover:text-primary transition-colors">Talks</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Services</a>
+                <a href="terms.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Terms & Conditions</a>
+                <a href="refund.html" class="block px-3 py-2 text-primary font-semibold">Refund Policy</a>
+                <a href="privacy.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Privacy Policy</a>
+                <a href="talks.html" class="block px-3 py-2 text-gray-700 hover:text-primary">Talks</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-20 mt-16">
+        <h1 class="text-4xl font-bold mb-8 text-gray-900">Refund Policy</h1>
+        <section class="prose max-w-none text-gray-700">
+            <h2>1. General Refund Principles</h2>
+            <p>We strive to ensure student satisfaction. This Refund Policy applies to all enrollment tiers for the GenAI and/or Core AI Skills Course. All refund requests must be submitted in writing to support@manishd.in.</p>
+            <h2>2. Eligibility Period for Refund</h2>
+            <p>Refunds will only be considered if requested within the first <strong>14 days</strong> following your initial enrollment date.</p>
+            <h2>3. Calculation of Refund</h2>
+            <ul>
+                <li><strong>Full Refund:</strong> If you request a refund <strong>before</strong> the start date of the first live class, you will be eligible for a <strong>100% refund</strong> of the tuition fee paid.</li>
+                <li><strong>Partial Refund:</strong> If you request a refund <strong>after</strong> the first live class has commenced but still within the 14-day eligibility period, your refund will be the total tuition fee paid <strong>minus</strong> a <strong>$150 administrative fee</strong> (to cover initial setup and processing costs) and a <strong>pro-rated amount</strong> for any live classes or support sessions already conducted or recorded materials accessed.</li>
+                <li><strong>No Refund:</strong> <strong>No refunds will be granted</strong> after the 14-day eligibility period, regardless of attendance or use of the materials.</li>
+                <li><strong>Tier-Specific Exception:</strong> Due to the deeply discounted nature of the <strong>Student ($101)</strong> tier, no refunds will be issued for this tier once the first live class has been accessed or the 14-day eligibility period has passed.</li>
+            </ul>
+            <h2>4. Processing</h2>
+            <p>Refunds, if approved, will be processed within 30 business days and returned to the original method of payment.</p>
+            <h2>Contact Us</h2>
+            <p>If you have any questions about our refund policy, please contact us at support@manishd.in.</p>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
