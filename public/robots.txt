@@ -4,6 +4,7 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://www.manishd.in/sitemap.xml
+Sitemap: https://blog.manish.in/sitemap.xml
 
 # Disallow private/admin directories (if any)
 Disallow: /cgi-bin/

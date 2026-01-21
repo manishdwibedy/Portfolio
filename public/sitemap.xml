@@ -21,8 +21,14 @@
    <url>
       <loc>https://www.manishd.in/talks.html</loc>
       <lastmod>2025-01-17</lastmod>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://blog.manish.in/</loc>
+      <lastmod>2025-01-17</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.9</priority>
    </url>
    <url>
       <loc>https://www.manishd.in/privacy.html</loc>
