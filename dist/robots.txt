@@ -8,4 +8,3 @@ Sitemap: https://www.manishd.in/sitemap.xml
 # Disallow private/admin directories (if any)
 Disallow: /cgi-bin/
 Disallow: /tmp/
-
