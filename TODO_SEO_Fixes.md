@@ -61,3 +61,34 @@
 ## Status: ✅ COMPLETED
 Last Updated: 2025-01-17
 
+---
+
+## SEO Link Text Fix - 2025-01-17
+
+### Issue Fixed
+Links on blog.manishd.in had non-descriptive "Read more" anchor text, which reduces accessibility and SEO effectiveness.
+
+### Files Modified
+- `/Users/manish/dev/blog/src/pages/index.astro`
+
+### Changes Made
+- Updated line 69: Changed `Read more` to `Read "{post.data.title}"` to create descriptive link text
+- This creates unique, descriptive anchor text for each blog post link
+
+### Results
+Before:
+- `/blog/fb-utis-engagement/` → "Read more"
+- `/blog/fastapi-backend/` → "Read more"
+- `/blog/rag-basics/` → "Read more"
+
+After:
+- `/blog/fb-utis-engagement/` → "Read 'Why Facebook is Finally Asking What You Actually Want to See'"
+- `/blog/fastapi-backend/` → "Read 'Building Scalable Backend Systems with Python and FastAPI'"
+- `/blog/rag-basics/` → "Read 'Understanding Retrieval-Augmented Generation (RAG)'"
+
+### Benefits
+1. ✅ Improved accessibility for screen readers
+2. ✅ Better SEO by providing context to search engines
+3. ✅ Clearer user understanding of link destination
+4. ✅ Descriptive anchor text follows web accessibility best practices
+

@@ -206,10 +206,10 @@
     <!-- Hero Section -->
     <section class="gradient-bg min-h-screen flex items-center justify-center text-white pt-20">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Beyond the Prompt: A Deep Dive into RAG</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Local RAG Pipeline</h1>
             <p class="text-lg md:text-xl mb-6 text-accent font-medium">Current Talk</p>
             <p class="text-base md:text-lg mb-8 max-w-3xl mx-auto opacity-90 px-4">
-                This talk will explore Retrieval-Augmented Generation (RAG) as a powerful solution to the limitations of traditional LLM prompting, such as hallucination and outdated knowledge. We will provide a deep dive into the RAG architecture, breaking down each component from data ingestion and chunking to vector embedding, retrieval, and generation. The session will go beyond basic concepts, exploring advanced retrieval techniques like hybrid and re-ranking search, and discuss practical strategies for optimizing performance. We'll conclude with real-world applications and a look at the future of RAG.
+                This talk explores building efficient Retrieval-Augmented Generation (RAG) pipelines that run entirely on local infrastructure. We'll cover local LLM integration, vector database setup, chunking strategies, and optimization techniques for privacy-focused AI applications. Learn how to deploy production-ready RAG systems without relying on external APIs.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button id="viewPdfBtn" class="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors inline-flex items-center">
@@ -221,7 +221,7 @@
                     <div class="modal-content" style="max-width: 90%; height: 90vh;">
                         <div class="modal-header">
                             <span class="close" id="closePdfModal">&times;</span>
-                            <h2 class="text-xl font-semibold">RAG Basics to Advanced - Slides Preview</h2>
+                            <h2 class="text-xl font-semibold">Local RAG Pipeline - Slides Preview</h2>
                         </div>
                         <div class="modal-body" style="height: calc(100% - 80px);">
                             <iframe style="width: 100%; height: 100%;" frameborder="0"></iframe>
@@ -239,7 +239,27 @@
     <section id="talks" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Talk Card 1 - IoT Development with ESP32 -->
+                <!-- Talk Card 1 - Beyond the Prompt: A Deep Dive into RAG -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-brain text-purple-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-900">Beyond the Prompt: A Deep Dive into RAG</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">Technical Conference 2024 • Multiple Venues</p>
+                    <p class="text-gray-700 mb-4">
+                        This talk explores Retrieval-Augmented Generation (RAG) as a powerful solution to the limitations of traditional LLM prompting, such as hallucination and outdated knowledge. Covers RAG architecture from data ingestion and chunking to vector embedding, retrieval, and generation. Advanced retrieval techniques like hybrid and re-ranking search, optimization strategies, real-world applications, and the future of RAG.
+                    </p>
+                    <div class="space-y-2">
+                        <a href="#" class="text-primary hover:underline block notes-link" data-talk="Beyond the Prompt: A Deep Dive into RAG" data-type="notes">
+                            <i class="fas fa-file-alt mr-2"></i>View Notes
+                        </a>
+                        <a href="#" class="text-primary hover:underline block resources-link" data-talk="Beyond the Prompt: A Deep Dive into RAG" data-type="resources">
+                            <i class="fas fa-link mr-2"></i>Resources & Slides
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Talk Card 2 - IoT Development with ESP32 -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-microchip text-primary text-2xl mr-3"></i>
@@ -261,7 +281,7 @@
                     </div>
                 </div>
 
-                <!-- Talk Card 2 - How the Internet Works -->
+                <!-- Talk Card 3 - How the Internet Works -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-network-wired text-accent text-2xl mr-3"></i>
@@ -283,7 +303,7 @@
                     </div>
                 </div>
 
-                <!-- Talk Card 3 - Supply Chain with Blockchain, IoT, AI -->
+                <!-- Talk Card 4 - Supply Chain with Blockchain, IoT, AI -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fab fa-bitcoin text-green-600 text-2xl mr-3"></i>
@@ -462,7 +482,7 @@
         // For dev testing: set this to true to skip email submission and directly open PDF modal
         const devSkipEmailSubmission = false;
 
-        const pdfPreviewLink = 'https://drive.google.com/file/d/1VtwI6ytCrhd1fcCb2iUsTrfdKcpHgApM/preview';
+        const pdfPreviewLink = 'https://drive.google.com/file/d/1PB2Y64HRtyIGzMq4GIT2OZBanZjfeO-2/preview';
         sendEmailBtn.addEventListener('click', async () => {
             if (devSkipEmailSubmission) {
                 // Directly open PDF modal for dev testing without submitting email
